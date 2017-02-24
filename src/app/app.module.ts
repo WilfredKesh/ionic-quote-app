@@ -4,13 +4,15 @@ import { MyApp } from './app.component';
 import { FavoritesPage } from '../pages/favorites/favorites';
 import { TabsPage} from '../pages/tabs/tabs';
 import { LibraryPage} from "../pages/library/library";
+import { QuotesPage } from "../pages/quotes/quotes";
 
 @NgModule({
   declarations: [
     MyApp,
     FavoritesPage,
     TabsPage,
-    LibraryPage
+    LibraryPage,
+    QuotesPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -20,7 +22,8 @@ import { LibraryPage} from "../pages/library/library";
     MyApp,
     FavoritesPage,
     TabsPage,
-    LibraryPage
+    LibraryPage,
+    QuotesPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

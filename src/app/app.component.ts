@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { FavoritesPage } from "../pages/favorites/favorites";
+
 import { TabsPage } from "../pages/tabs/tabs";
 
 

@@ -8,6 +8,7 @@ import {LibraryPage} from "../library/library"
     <ion-tabs>
       <ion-tab [root]="favoritesPage" tabTitle="Favorites" tabIcon="star"></ion-tab>
       <ion-tab [root]="libraryPage" tabTitle="Library" tabIcon="book"></ion-tab>
+    
     </ion-tabs>
     
     `
