@@ -2,7 +2,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>quotes</ion-title>
+    <ion-title>{{quoteGroup.category}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -10,14 +10,20 @@
 
 <ion-content padding>
 
-  <ion-card>
+  <ion-card *ngFor="let quote of quoteGroup.quotes; let i = index">
     <ion-card-header>
-      <h3>Hello</h3>{{quoteGroup.category}}
+      <h3>#{{ i + 1 }}</h3>
    
     </ion-card-header>
     <ion-card-content>
-      <p>Booyaah!</p>
+      <p>{{quote.text}}</p>
+      <p class="author">{{quote.person}}</p>
     </ion-card-content>
+    <ion-row>
+      <ion-col text-right>
+        <button ion-button clear (click)="addToFavorites(quote)">Favorite</button>
+      </ion-col>
+    </ion-row>
   </ion-card>
 
 </ion-content>

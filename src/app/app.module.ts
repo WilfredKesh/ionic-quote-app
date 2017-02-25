@@ -5,6 +5,7 @@ import { FavoritesPage } from '../pages/favorites/favorites';
 import { TabsPage} from '../pages/tabs/tabs';
 import { LibraryPage} from "../pages/library/library";
 import { QuotesPage } from "../pages/quotes/quotes";
+import {QuotesService} from "../services/quotes";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,6 @@ import { QuotesPage } from "../pages/quotes/quotes";
     LibraryPage,
     QuotesPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, QuotesService]
 })
 export class AppModule {}
