@@ -18,7 +18,7 @@ ionViewWillEnter(){
   this.quotes = this.quotesService.getFavoriteQuotes();
 }
 onViewQuote(quote: Quote){
-  const modal = this.modalCtrl.create(QuotePage);
+  const modal = this.modalCtrl.create(QuotePage, quote);
   modal.present();
 
 }
