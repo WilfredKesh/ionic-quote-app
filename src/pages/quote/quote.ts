@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  NavParams } from 'ionic-angular';
+import {  NavParams , ViewController} from 'ionic-angular';
 
 @Component({
   selector: 'page-quote',
@@ -7,10 +7,13 @@ import {  NavParams } from 'ionic-angular';
 })
 export class QuotePage {
 
-  constructor( public navParams: NavParams) {}
+  constructor( public navParams: NavParams, private viewCtrl: ViewController) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad QuotePage');
+  }
+  onClose(){
+    this.viewCtrl.dismiss();
   }
 
 }
