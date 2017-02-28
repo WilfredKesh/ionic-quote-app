@@ -22,11 +22,14 @@ onViewQuote(quote: Quote){
   modal.present();
   modal.onDidDismiss((remove: boolean) => {
     if (remove) {
-      this.quotesService.removeQuoteFromFavorites(quote);
-     this.quotes = this.quotesService.getFavoriteQuotes();
+      this.onRemoveFromFavorites;
     }
 
   });
 
+}
+onRemoveFromFavorites(quote: Quote){
+    this.quotesService.removeQuoteFromFavorites(quote);
+     this.quotes = this.quotesService.getFavoriteQuotes();
 }
 }
